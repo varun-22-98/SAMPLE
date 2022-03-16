@@ -1,0 +1,89 @@
+
+.pad{
+    margin-top: 0px;
+    background-image: url('../images/login.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 631px){
+  .pad1{
+    margin-top: 280px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid rgb(44, 41, 37);
+    border-radius: 15px;
+    box-shadow: 0 4px 40px 0 rgb(107, 85, 53), 0 6px 20px 0 rgba(255, 45, 45, 0.19);
+  }
+}
+
+@media screen and (min-width: 632px){
+  .pad1{
+    margin-top: 180px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid rgb(44, 41, 37);
+    border-radius: 15px;
+    box-shadow: 0 4px 40px 0 rgb(107, 85, 53), 0 6px 20px 0 rgba(255, 45, 45, 0.19);
+  }
+}
+
+.input{
+  /* margin: 5px;
+  margin-left: 15px; */
+  margin: auto;
+  display: block;
+  width: 90%;
+  border-radius: 15px;
+  border: rgba(95, 80, 80, 0.19);
+  box-shadow: 0 4px 7px 0 rgb(131, 106, 68), 0 6px 10px 0 rgba(46, 42, 42, 0.19);
+  border:1px solid rgb(114, 105, 88);
+  padding-left:10px;
+}
+
+small{
+  padding-left:25px;
+}
+
+@media screen and (max-width: 631px){
+  .sub{
+    margin-top: 10px;
+    margin: auto;
+    display: block;
+    padding-left: 40px;
+    padding-right: 70px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (min-width: 632px){
+  .sub{
+    margin-top: 10px;
+    margin: auto;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+  }
+}
+
+.h3{
+  margin-top: 15px;
+  text-align: center; 
+}
+
+.button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: arial, sans-serif;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+}
