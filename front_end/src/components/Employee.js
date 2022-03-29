@@ -30,6 +30,7 @@ function Employee(){
     return(
     <>
     <NavBarDashboad/>
+    <div style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F",paddingBottom:"100px"}:{backgroundColor:"#2cafece5",paddingBottom:"100px"}} >
         <div className="jumbotron">
             <div className="container-fluid">
                 <div className="row">
@@ -37,13 +38,13 @@ function Employee(){
                         <div className="accordion" id="accordionExample">
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="headingOne">
-                                <div className="card">
+                                <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F"}:{backgroundColor:"#2cafece5"}}>
                                     <div className=" row card-header">
                                         <div className="col-12 col-md-4" data-bs-toggle="collapse" data-bs-target="#collapseOne"><img src={person} alt="sandy" width="200px" height="200px"/> </div> 
                                         <div className="col-12 col-md-8" style={{color: "black"}}> 
                                         <h2>{employee["empName"]}</h2> 
                                         <footer className="blockquote-footer">
-                                            <cite className="p-1" title="Source Title">{employee["designation"]}</cite>
+                                            <cite className="p-1 text-dark" title="Source Title">{employee["designation"]}</cite>
                                         </footer>
                                         </div>
                                     </div>
@@ -53,29 +54,31 @@ function Employee(){
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-3">
-                        <div className="card">
+                    <div className="col-12 col-md-4">
+                        <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F"}:{backgroundColor:"#2cafece5"}}>
                             <div className="card-header">
-                                <a href={teams} className="btn mx-1" style={{backgroundColor:"rgb(137, 88, 228)"}}> <SiMicrosoftteams/> </a>
+                                <a href={teams} className="btn mx-1 text-white" style={{backgroundColor:"rgb(137, 88, 228)",fontSize:"20px"}}> <SiMicrosoftteams/> </a>
                                 {/* <a className="btn btn-primary mx-1" href="http://www.linkedin.com/in/sandeepshades88/"> <i className="bi bi-linkedin"></i> </a> */}
                                 <a className="btn btn-danger mx-1" href={mail}> <i className="bi bi-envelope-plus"></i> </a>
                                 <a href={tel} className="btn btn-secondary mx-1"> <i className="bi bi-telephone-outbound"></i> </a>
                                 <a  className="btn btn-success mx-1" href={wa} style={{border: "1px solid"}}> <i className="bi bi-whatsapp"></i> </a>
+                                <EditEmployee employee = {employee}/>
                             </div>
                         </div>  
                     </div>
                     <div className="col-12 col-md-2">
-                        <EditEmployee employee = {employee}/>
+                        {/* <EditEmployee employee = {employee}/> */}
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <nav aria-label="breadcrumb" className=" mx-5 my-2">
           <ol className="breadcrumb">
-            <li className="breadcrumb-item text-dark"><Link to="/dashboard" state={{"data": data}}>Home</Link></li>
-            <li className="breadcrumb-item active"><Link to={`/${employee["Lab"]}`} state={{"data": data}}>{employee["Lab"]}</Link></li>
-            <li className="breadcrumb-item active" aria-current="page">{employee["empName"]}</li>
+            <li className="breadcrumb-item"><Link className="text-dark" to="/dashboard" state={{"data": data}}>Home</Link></li>
+            <li className="breadcrumb-item"><Link className="text-dark" to={`/${employee["Lab"]}`} state={{"data": data}}>{employee["Lab"]}</Link></li>
+            <li className="breadcrumb-item active text-dark" aria-current="page">{employee["empName"]}</li>
           </ol>
         </nav>
 
@@ -262,7 +265,8 @@ function Employee(){
                 </div>
             </div>
         </div>
-                    
+
+        </div>      
     </>
     );
 }

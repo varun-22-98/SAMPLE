@@ -27,7 +27,7 @@ signOut(auth).then(() => {
                     <div className="col-1 col-md-3"></div>
                     
                     <div className="col-7 col-md-5">
-                        <h4> Onboarding and customer communications (OCC) </h4>
+                        <h4 className='h4'> Onboarding and customer communications (OCC) </h4>
                     </div>
                 
             </div>

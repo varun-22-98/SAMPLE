@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import {useForm}  from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import './Login.css';
@@ -72,7 +72,7 @@ export default function Login() {
   
  
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     authListener();
   },[]);
 

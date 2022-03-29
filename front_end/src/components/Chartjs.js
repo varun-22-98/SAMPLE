@@ -23,48 +23,51 @@ ChartJS.register(
   );
 // defaults.plugins.legend.position = 'bottom'
 let delayed;
-const BarChart = ({values,value,count}) => {
+const BarChart = ({values,value,count,total}) => {
     return (
-        <div className="myChart" style={{marginTop:"50px",backgroundColor:"rgba(240, 248, 255,0.8)"}}>
+        <div className="myChart text-dark" style={{marginTop:"50px",backgroundColor:"rgba(240, 248, 255, 0.699)"}}>
             <Bar
-            data={{
+            data={ {
                 labels: ['Cards', 'Loans', 'Savings', 'Banking', 'Zoomerskool'],
+                // fontColor : '#000000',
                 datasets:[
                     {
-                        label: 'Offsite',
+                        label: `Offshore (${total[0]})`,
                         data: values,
+                        // fontColor : '#000000',
                         backgroundColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)'
+                            '#000000',
+                            // 'rgba(54, 162, 235, 1)',
+                            // 'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)'
                         ],
                         borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)'
+                            'rgba(255,159,64,1)',
+                            // 'rgba(54, 162, 235, 1)',
+                            // 'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)'
                         ],
                         borderWidth: 1,
                     },
                     {
-                        label: 'Onsite',
+                        label: `Onshore (${total[1]})`,
                         data: value,
+                        // fontColor : '#000000',
                         backgroundColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)'
+                            '#D2691E',
+                            // 'rgba(253, 0, 97, 0.6)',
+                            // 'rgba(0, 173, 253, 0.898)',
+                            // 'rgba(253, 0, 0, 0.898)',
+                            // 'rgba(253, 0, 169, 0.898)'
                         ],
                         borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)'
+                            'rgb(30, 255, 0)',
+                            // 'rgba(253, 0, 97, 0.898)',
+                            // 'rgba(0, 173, 253, 0.898)',
+                            // 'rgba(253, 0, 0, 0.898)',
+                            // 'rgba(253, 0, 169, 0.898)'
                         ],
                         borderWidth: 1,
                     }
@@ -74,10 +77,12 @@ const BarChart = ({values,value,count}) => {
             width={600}
             options={{
                 maintainAspectRatio: false,
+                fontColor : '#000000',
                 plugins: {
                     title: {
                         display: true,
                         text: `Total Employees ${count}`,
+                        fontColor : '#000000',
                     },
                     legend: {
                         position: 'bottom',
@@ -86,7 +91,9 @@ const BarChart = ({values,value,count}) => {
                                 'rgba(54, 162, 235, 1)',
                                 'rgba(75, 192, 192, 1)'
                             ],
+                            fontColor : '#000000',
                         }
+                        
                     }
 
                 },

@@ -4,8 +4,20 @@ import Lloyds from '../images/Lloyds.png'
 import {Link, useLocation} from 'react-router-dom'
 import Search from './Search'
 import NavBarDashboad from './NavBarDashboad';
+import './Lab.css';
+import { IMAGES } from '../shared/images';
+import Cards from "../images/cards.png";
+import Loans from "../images/loans.png";
+import Savings from "../images/savings.png";
+import Banking from "../images/banking.png";
+import Zoomerskool from "../images/zoomerskool.png";
 
 export default function Lab({title}) {
+
+    const lab2 = [
+        Cards,Loans,Savings,Banking,Zoomerskool
+    ]
+    console.log(title);
     const location = useLocation();
     const {data} = location.state;
 
@@ -28,6 +40,7 @@ export default function Lab({title}) {
 
     if(title ==="OCC"){
         var filterdata = data;
+        console.log(filterdata);
         var count = Object.keys(filterdata).length;
         var offsite = filterdata.filter((off)=> off["location"]==="Offsite");
         var offsiteCount = Object.keys(offsite).length;
@@ -43,76 +56,86 @@ export default function Lab({title}) {
         var onsite = filterdata.filter((ons)=> ons["location"]==="Onsite");
         var onsiteCount = Object.keys(onsite).length;
     }
-    console.log(`filterdata ${filterdata}`)
+    // console.log(`filterdata ${filterdata}`)
     const filtered = filterdata.filter(
         item => {
+            // console.log(item)
           return (
             item.empName.toLowerCase().includes(query.toLowerCase()) ||
             item.EmpId.toLowerCase().includes(query.toLowerCase()) 
           )
         })
 
+    const styles = {
+        // backgroundImage:title
+        backgroundImage:`url(${Zoomerskool})`
+    }
+
   return (
     <>
     <NavBarDashboad/>
-    <header className=" py-4  text-white rounded " style={{marginTop:"70px", marginRight:"0px", backgroundColor:"#ffa500"}}>
+    <div className='pad8' style={
+title === 'Cards' ? {backgroundImage:`url(${Cards})`} :
+( title === 'Loans' ? {backgroundImage:`url(${Loans})`} :
+  (title === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
+  (title === 'Savings' ? {backgroundImage:`url(${Savings})`} :  styles )))
+}>
+    <header className="rounded">
         <div className="container-fluid px-0">
             <div className="row">
-                {/* <div className="col-12 col-md-3 align-self-center " > */}
-                    {/* <img className="p-3" src={Lloyds} alt="lloyds-logo" width="250px"/> */}
-                {/* </div> */}
-                <div className="col-12 col-md-3 align-self-center px-5" style={{color: "black"}}>
-                    <h2>{title} Team</h2>
-                </div>
-                {/* <div className='col-12 col-md-2 '>
-                    <div className='card'>
-                        <div className='card-header bg-dark text-white'>
-                            <p>Total cards strength</p>
-                        </div>
-                        <div className='card-body text-dark'>
-                            <p>{count}</p>
-                        </div>
+ 
+                <div className="col-12 col-md-7 px-5" >
+                    <div>
+                        <nav aria-label="breadcrumb">
+                            <ol className="breadcrumb">
+                                <li className="breadcrumb-item text-dark"><Link to="/dashboard" className='text-dark'>Home</Link></li>
+                                <li className="breadcrumb-item active text-dark" aria-current="page">{title}</li>
+                            </ol>
+                        </nav>
+                        <h2 className='text-dark'>{title} Team</h2>
                     </div>
-                </div>
-                <div className='col-12 col-md-2 '>
-                    <div className='card'>
-                        <div className='card-header bg-dark text-white'>
-                            <p>Total Offsite strength</p>
-                        </div>
-                        <div className='card-body text-dark'>
-                            <p>{offsiteCount}</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-12 col-md-2 '>
-                    <div className='card'>
-                        <div className='card-header bg-dark text-white'>
-                            <p>Total Onsite strength</p>
-                        </div>
-                        <div className='card-body text-dark'>
-                            <p>{onsiteCount}</p>
-                        </div>
-                    </div>
-                </div> */}
 
-                <div className='col-md-5'></div>
+                    <Search query={query} onQueryChange={onQueryChange}/>
+                        <table className="table table-striped pad9">
+                            <thead className="table-dark">
+                                <tr>
+                                <th>S no</th>
+                                <th>Employee Name</th>
+                                <th>Employee ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                filtered.map((d, i) => (
+                                    <tr key={i}>
+                                        <th>{i+1}</th>
+                                        <th>{d["empName"]}</th>
+                                        <th> <Link to={'/employee'} state={{"employeeId":d["EmpId"], "data": filterdata}}>{d["EmpId"]}</Link>  </th>
+                                    </tr>
+                                ))
+                            }
+                            </tbody>
+                        </table>
 
-                <div className='col-md-3'>
-               
-                    <div className='accordion'>
-                        <div className='accordion-item'>
-                        {/* <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                            <div className='accordion-header accordion-button collapsed'  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            {/* <ul className="list-group"> */}
+                    
+                    
+
+                    
+                </div>
+                    
+                    <div className="table-responsive col-md-3 offset-md-1 py-5" style={{marginTop:"100px"}} >
+
+                    <div className='accordion py-4 '>
+                        <div className='accordion-item '>
+                            <div className='accordion-header accordion-button collapsed bg-dark text-white'  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <p className=" d-flex justify-content-between align-items-center">
                                     Total Strength
-                                    <span className="badge bg-primary rounded-pill px-3" style={{marginLeft:"120px"}}>{count}</span>
+                                    <span className="badge bg-primary rounded-pill px-3" style={{marginLeft:"110px"}}>{count}</span>
                                 </p>
                                 
-                            {/* </ul> */}
-                            {/* </button> */}
+
                             </div>
-                            <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div className='accordion-body'>
                                     <ul className='list-group'>
                                         <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -128,53 +151,38 @@ export default function Lab({title}) {
                             </div>
                         </div>
                     </div>
-                    
-                    {/* <li className="list-group-item d-flex justify-content-between align-items-center">
-                        Onsite Strength
-                        <span className="badge bg-primary rounded-pill">{onsiteCount}</span>
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center">
-                        Offsite Strength
-                        <span className="badge bg-primary rounded-pill">{offsiteCount}</span>
-                    </li> */}
-                    
-                    
-                </div>
+                    {/* <Search query={query} onQueryChange={onQueryChange}/>
+                        <table className="table table-striped pad9">
+                            <thead className="table-dark">
+                                <tr>
+                                <th>S no</th>
+                                <th>Employee Name</th>
+                                <th>Employee ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                filtered.map((d, i) => (
+                                    <tr key={i}>
+                                        <th>{i+1}</th>
+                                        <th>{d["empName"]}</th>
+                                        <th> <Link to={'/employee'} state={{"employeeId":d["EmpId"], "data": filterdata}}>{d["EmpId"]}</Link>  </th>
+                                    </tr>
+                                ))
+                            }
+                            </tbody>
+                        </table> */}
+                    </div>
+
+
+  
+
             </div>
         </div>
     </header>
-
-    <nav aria-label="breadcrumb" className=" mx-5 my-2">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item text-dark"><Link to="/dashboard">Home</Link></li>
-            <li className="breadcrumb-item active" aria-current="page">{title}</li>
-          </ol>
-    </nav>
-    <Search query={query} onQueryChange={onQueryChange}/>
-    <div className="table-responsive pt-5 col-md-6 offset-md-3" >
-        <table className="table table-striped ">
-            <thead className="table-dark">
-                <tr>
-                <th>S no</th>
-                <th>Employee Name</th>
-                <th>Employee ID</th>
-                </tr>
-            </thead>
-            <tbody>
-            {
-                filtered.map((d, i) => (
-                    <tr key={i}>
-                        <th>{i+1}</th>
-                        <th>{d["empName"]}</th>
-                        <th> <Link to={'/employee'} state={{"employeeId":d["EmpId"], "data": filterdata}}>{d["EmpId"]}</Link>  </th>
-                    </tr>
-                ))
-            }
-            </tbody>
-        </table>
-    </div>
     
 
+    </div>
 
  </>
   );

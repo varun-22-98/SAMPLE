@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import {BiCaretDown, BiSearch, BiCheck} from "react-icons/bi"
+import {BiCaretDown, BiSearch, BiCheck} from "react-icons/bi";
+import './Lab.css';
 // import './Search.css'
 
 const Dropdown = ({toggle, sortBy, onSortChange, orderBy, onOrderChange}) => {
@@ -52,22 +53,23 @@ const Dropdown = ({toggle, sortBy, onSortChange, orderBy, onOrderChange}) => {
 export default function Search({query, onQueryChange}) {
   let [toggleSort, setToggleSort] = useState(false);
   return (
-    
-      <div className="p-2">
+    <>
+      {/* <div className="p-2"> */}
 
 {/* <nav className="navbar navbar-warning bg-warning"> */}
-<form className="container-fluid">
-  <div className='row justify-content-center align-items-center'>
-    <div className='col-12 col-md-6'>
-      <div className="input-group">
-        <span className="input-group-text btn-warning rounded-circle" id="basic-addon1"><BiSearch /></span>
-        <input type="text" value={query} onChange={(e)=> {onQueryChange(e.target.value)}} className="form-control border-warning rounded-pill" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"></input>
-      </div>
-    </div>
-  </div>
-</form>
+      <form className="container-fluid pad10">
+        <div className='row '>
+          <div className='col-12 col-md-12 my-4'>
+            <div className="input-group">
+              <span className="input-group-text btn-warning rounded-circle" id="basic-addon1"><BiSearch /></span>
+              <input type="text" value={query} onChange={(e)=> {onQueryChange(e.target.value)}} className="form-control border-warning rounded-pill bg-dark text-white" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"/>
+            </div>
+          </div>
+        </div>
+      </form>
 {/* </nav> */}
 
-    </div>
+    {/* </div> */}
+    </>
   )
 }

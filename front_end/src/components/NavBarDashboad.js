@@ -47,10 +47,11 @@ signOut(auth).then(() => {
 
  <div className="collapse togg" id="navbarToggleExternalContent">
     <div className="container-fluid text-white">
-        <div className="row justify-content-center">
-            <div className="col-12 col-md offset-md-1 padd1"><AddEmployee/> </div>
-            <div className="col-12 col-md offset-md-1 padd1"><Download/> </div>
-            <div className="col-12 col-md offset-md-1 padd1"><RegisterUser/> </div>
+        <div className="row ">
+            <div className="col-6 col-md offset-md-1 padd1"><AddEmployee/> </div>
+            <div className="col-6 col-md offset-md-1 padd1"><Download/> </div>
+            <div className="col-6 col-md offset-md-1 padd1"><RegisterUser/> </div>
+            
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect,useLayoutEffect} from 'react'
 import { getAuth } from "firebase/auth";
 import Login from './Login.js';
 import authinit from './authinit.js';
@@ -8,7 +8,7 @@ export default function Protected() {
         const navigate = useNavigate()
         const auth = getAuth(authinit);
         const user = auth.currentUser
-        useEffect(() =>{
+        useLayoutEffect(() =>{
             if(user){
                 navigate('/dashboard')
             }else{

@@ -6,7 +6,7 @@ import * as XLSX from "xlsx";
 export default function Download() {
 
     const [data, setData] = useState(null);
-    useEffect(() => {
+    useEffect(async () => {
         axios.get('https://back-end-tlwrpe5ptq-el.a.run.app/getdata').then((response) => {
           setData(response.data);
         })

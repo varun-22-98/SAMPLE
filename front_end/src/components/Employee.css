@@ -1,12 +1,15 @@
 .jumbotron{
-    background-color: #fcbb43;
+    background-color: #000000;
     padding-top: 115px;
     padding-bottom: 50px;
   }
 .card-header-1{
-  background-color: #fcbb43;
+  background-color: #000;
+  color: #fff;
+  /* color: #e9f3f8e5; */
 }
 
 .p-1{
   font-size: 20px ;
 }
+
