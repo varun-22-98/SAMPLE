@@ -28,7 +28,7 @@ const BarChart = ({values,value,count,total}) => {
         <div className="myChart text-dark" style={{marginTop:"50px",backgroundColor:"rgba(240, 248, 255, 0.699)"}}>
             <Bar
             data={ {
-                labels: ['Cards', 'Loans', 'Savings', 'Banking', 'Zoomerskool'],
+                labels: ['Cards', 'Loans', 'Savings', 'Banking','OIE','Personalization','DIGI_COMMS','DOC services', 'Other'],
                 // fontColor : '#000000',
                 datasets:[
                     {

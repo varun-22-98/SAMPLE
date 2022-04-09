@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import Lab from './components/Lab';
 import Spinner from './components/Spinner';
 import axios from 'axios';
+import SecondPage from './components/SecondPage';
 
 
 

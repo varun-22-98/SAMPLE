@@ -18,8 +18,8 @@ console.log(errors);
 
   return (
     <>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <i class="bi bi-person-plus-fill"></i> Add Employee
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i className="bi bi-person-plus-fill"></i> Add Employee
     </button>
 
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,7 +66,7 @@ console.log(errors);
                   </div>
 
                   <div className="form-floating mb-3">
-                    <select class="form-select"  {...register("location",{required:"Location is required"})}>
+                    <select className="form-select"  {...register("location",{required:"Location is required"})}>
                       <option value="Onsite">Onsite</option>
                       <option value="Offsite">Offsite</option>
                     </select>
@@ -174,8 +174,12 @@ console.log(errors);
                       <option value="Cards">Cards</option>
                       <option value="Loans">Loans</option>
                       <option value="Savings">Savings</option>
-                      <option value="Zoomerskool">Zoomerskool</option>
                       <option value="Banking">Banking</option>
+                      <option value="OIE">OIE</option>
+                      <option value="Personalization">Personalization</option>
+                      <option value="DIGI COMMS">DIGI COMMS</option>
+                      <option value="DOC services">DOC services</option>
+                      <option value="Other">Other</option>
                     </select>
                     <label className="pr-3" htmlFor="exampleInputLab" name="Lab">Labs </label>
                     
@@ -273,13 +277,21 @@ console.log(errors);
                     {errors.contactNumber && (<small className='text-danger'>{errors.contactNumber.message}</small>)}
                   </div>
 
-                  <div className="form-floating">
+                  <div className="form-floating mb-3">
                   <input type="number" className="form-control" id="exampleInputEmContactNo"  placeholder="Enter Emergency Contact No " {...register("emergencyContact",{required:"Emergency contact is required",pattern: {
                   value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
                   message: "Invalid phone no",
                 },})} onKeyUp={() => { trigger("emergencyContact");}}/>
                     <label htmlFor="exampleInputEmContactNo">Emergency Contact No</label>
                     {errors.emergencyContact && (<small className='text-danger'>{errors.emergencyContact.message}</small>)}
+                  </div>
+
+                  <div className="form-floating ">
+                    <select className="form-select"  {...register("Gender",{required:"Gender is required"})}>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <label htmlFor="exampleInputGender">Gender</label>
                   </div>
 
                   </div>
@@ -294,11 +306,14 @@ console.log(errors);
                     {errors.personalMail && (<small className='text-danger'>{errors.personalMail.message}</small>)}
                   </div>
 
-                  <div className="form-floating">
+                  <div className="form-floating mb-3">
                   <input type="date" className="form-control" id="exampleInputDOB"  placeholder="Enter Date of Birth" {...register("DOB",{required:"Candidate DOB is required"})} onKeyUp={() => { trigger("DOB");}}/>
                     <label htmlFor="exampleInputDOB">Date of Birth</label>
                     {errors.DOB && (<small className='text-danger'>{errors.DOB.message}</small>)}
                   </div>
+
+                  
+                  
 
                   </div>
                   </div>

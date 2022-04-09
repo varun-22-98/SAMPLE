@@ -190,8 +190,13 @@ console.log(errors);
                       <option value="Cards">Cards</option>
                       <option value="Loans">Loans</option>
                       <option value="Savings">Savings</option>
-                      <option value="Zoomerskool">Zoomerskool</option>
                       <option value="Banking">Banking</option>
+                      <option value="OIE">OIE</option>
+                      <option value="Personalization">Personalization</option>
+                      <option value="DIGI COMMS">DIGI COMMS</option>
+                      <option value="DOC services">DOC services</option>
+                      <option value="Other">Other</option>
+                      
                     </select>
                     <label className="pr-3" htmlFor="InputLab" name="Lab">Labs </label>
                   </div>
@@ -304,6 +309,17 @@ console.log(errors);
                     {errors.emergencyContact && (<small className='text-danger'>{errors.emergencyContact.message}</small>)}
                     <label htmlFor="InputEmContact">Emergency Contact No</label>
                   </div>
+
+                  <div className="form-floating mb-3">
+                    
+                    <select className="form-select shadow border-solid border-black rounded" {...register("Gender",{value:e["Gender"],required:"Gender is required"})}>
+                    <option value="select Gender " selected hidden>Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <label htmlFor="InputGender">Gender</label>
+                  </div>
+
                   </div>
                   <div className="col-12 col-md-5">
 

@@ -15,8 +15,9 @@ createUserWithEmailAndPassword(auth, data.email, data.password)
     // Signed in 
     const user = userCredential.user;
     // ...
-    alert("New user created successfully")
-    navigate('/dashboard')
+    alert("New user created successfully");
+    window.location.reload(false);
+    navigate('/second')
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -36,7 +37,7 @@ createUserWithEmailAndPassword(auth, data.email, data.password)
   Register New User
 </button>
 
-<div className="modal fade" id="newUser" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="newUser" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">

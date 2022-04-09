@@ -60,7 +60,7 @@ export default function Login() {
         // const uid = user.uid;
         // ...
         console.log("Signed In")
-        navigate(`/dashboard`, {state: user.email})
+        navigate(`/second`, {state: user.email})
         
       } else {
         // User is signed out

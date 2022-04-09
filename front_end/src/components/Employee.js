@@ -253,6 +253,10 @@ function Employee(){
                                                             <th>Date Of Birth</th>
                                                             <td>{employee["DOB"]}</td>
                                                         </tr>
+                                                        <tr>
+                                                            <th>Gender</th>
+                                                            <td>{employee["Gender"]}</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
