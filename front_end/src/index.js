@@ -10,6 +10,10 @@ import Login from './components/Login';
 import Protected from './components/Protected';
 import ForgotPassword from './components/ForgotPassword';
 import SecondPage from './components/SecondPage';
+import DemandSupply from './demand_components/DemandSupply';
+import SourceLab from './demand_components/SourceLab';
+import './App.css';
+import Sourcing from './supply_components/Sourcing';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -33,6 +37,18 @@ ReactDOM.render(
         <Route path="/other" element={<Lab title="Other"/>}/>
         <Route path="/total" element={<Lab title="OCC"/>}/>
         <Route path="/employee" element={<Employee />}/>
+        <Route path="/demand" element={<DemandSupply/>}/>
+        <Route path="/DemandSupply" element={<DemandSupply/>}/>
+        {/* <Route path="/Banking1" element={<SourceLab Lab="Banking"/>}/>
+        <Route path="/Cards1" element={<SourceLab Lab="Cards"/>}/>
+        <Route path="/Savings1" element={<SourceLab Lab="Savings"/>}/>
+        <Route path="/Loans1" element={<SourceLab Lab="Loans"/>}/>
+        <Route path="/Digicomms1" element={<SourceLab Lab="Digi.Comms"/>}/>
+        <Route path="/Docservices1" element={<SourceLab Lab="Doc.Services"/>}/>
+        <Route path="/OIE1" element={<SourceLab Lab="OIE"/>}/>
+        <Route path="/Personalisation1" element={<SourceLab Lab="Personalisation"/>}/> */}
+        <Route path="/DemandDetails" element={<SourceLab />}/>
+        <Route path="/Sourcing" element={<Sourcing/>}/>
       </Route>
       {/* <Route path="*" element={<Navigate replace to="/" />} /> */}
     </Routes>

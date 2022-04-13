@@ -1,0 +1,62 @@
+@media screen and (max-width:100%){
+    .pad4{
+        margin-top: 0px;
+        background-image: url('../images/demandsupply1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-blend-mode: color-burn;
+        /* filter: blur(5px); */
+        /* -webkit-filter: blur(5px); */
+        /* height: 100vh; */
+        /* Remove height to fix the background */
+        
+    }
+    
+    
+    .pad5{
+        background-color: rgba(240, 248, 255, 0.699);
+    }
+    
+    .pad6{
+        margin-top: 100px;
+    }
+    
+    .pad7{
+        margin-top: 500px;
+    }
+    .pad9{
+        text-align: left;
+    }
+}
+
+
+
+@media screen and (min-width: 632px){
+    .pad4{
+        margin-top: 0px;
+        background-image: url('../images/demandsupply1.jpg');
+        background-size:cover ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* filter: blur(5px); */
+        /* -webkit-filter: blur(5px); */
+        /* height: 100vh; */
+        /* Remove height to fix the background */
+        
+    }
+    
+    .pad5{
+        background-color: rgba(240, 248, 255, 0.945);
+    }
+    
+    .pad6{
+        margin-top: 50px;
+    }
+    .p4{
+        text-decoration-color: rgb(0, 0, 0);
+    }
+    .pad7{
+        margin-left: 70px;
+    }
+}
