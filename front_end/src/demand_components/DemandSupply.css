@@ -1,5 +1,5 @@
 @media screen and (max-width:100%){
-    .pad4{
+    .mar4{
         margin-top: 0px;
         background-image: url('../images/demandsupply1.jpg');
         background-size: cover;
@@ -14,18 +14,18 @@
     }
     
     
-    .pad5{
+    .mar5{
         background-color: rgba(240, 248, 255, 0.699);
     }
     
-    .pad6{
+    .mar6{
         margin-top: 100px;
     }
     
-    .pad7{
+    .mar7{
         margin-top: 500px;
     }
-    .pad9{
+    .mar9{
         text-align: left;
     }
 }
@@ -33,7 +33,7 @@
 
 
 @media screen and (min-width: 632px){
-    .pad4{
+    .mar4{
         margin-top: 0px;
         background-image: url('../images/demandsupply1.jpg');
         background-size:cover ;
@@ -46,17 +46,17 @@
         
     }
     
-    .pad5{
+    .mar5{
         background-color: rgba(240, 248, 255, 0.945);
     }
     
-    .pad6{
+    .mar6{
         margin-top: 50px;
     }
     .p4{
         text-decoration-color: rgb(0, 0, 0);
     }
-    .pad7{
+    .mar7{
         margin-left: 70px;
     }
 }

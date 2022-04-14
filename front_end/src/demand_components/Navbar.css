@@ -1,40 +1,40 @@
 @media screen and (max-width: 631px){
-    .med{
+    .med1{
         width : 130px;
         height: 25px;
     }
-    .h4{
+    .h41{
         padding-top: 15px;
         font-size: 10px !important;
     }
-    .button1{
+    .button11{
         width : 55px;
         height: 30px;
         font-size: 10px !important;
     }
 
-    .togg{
+    .togg1{
         margin-top: 65px;
         background-color: #000;
     }
 
-    .padd1{
+    .padd11{
         padding: 10px;
         color: #000;
     }
 }
 
-.dark{
+.dark1{
     background-color: #000;
 }
 
 @media screen and (min-width: 632px){
-    .togg{
+    .togg1{
         margin-top: 87px;
         background-color: #000;
     }
 
-    .padd1{
+    .padd11{
         padding: 30px 0px;
         color: #000;
     }

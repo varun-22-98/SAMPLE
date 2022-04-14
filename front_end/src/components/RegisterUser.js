@@ -33,7 +33,7 @@ createUserWithEmailAndPassword(auth, data.email, data.password)
   return (
     <>
 
-<button type="button" className="btn btn-primary ml-5" data-bs-toggle="modal" data-bs-target="#newUser">
+<button type="button" className="btn btn-primary ml-5" data-bs-toggle="modal tooltip" data-bs-placement="top" title="Click here to create new credentials for your colleagues to login to this website." data-bs-target="#newUser">
   Register New User
 </button>
 

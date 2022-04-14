@@ -7,7 +7,7 @@ import {TiGroup} from 'react-icons/ti'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
 import Chartjs from './Chartjs';
-import NavBarDashboad from './NavBarDashboad';
+import NavBarEmployeeDetails from './NavBarEmployeeDetails';
 import './Dashboard.css';
 import Spinner from './Spinner';
 
@@ -114,7 +114,7 @@ export default function Dashboard({data}) {
 
   return (
       <>
-      <NavBarDashboad/>
+      <NavBarEmployeeDetails/>
       <div className="container-fluid pad4">
           
           <div className='row'>

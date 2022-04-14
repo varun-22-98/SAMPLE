@@ -22,15 +22,15 @@ function Employee(){
       employee = employee[0]
       var mail = "mailto:"+employee["tcsMail"]
       var teams = "https://teams.microsoft.com/l/chat/0/0?users=" + employee["tcsMail"]
-      var wa = "https://wa.me/+91" + employee["contactNumber"]
-      var tel = "tel:=+91"+employee["contactNumber"]
+    //   var wa = "https://wa.me/+91" + employee["contactNumber"]
+      var tel = "Phone number = +91 "+employee["contactNumber"]
 
     //   console.log(employee)
 
     return(
     <>
     <NavBarDashboad/>
-    <div style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F",paddingBottom:"100px"}:{backgroundColor:"#2cafece5",paddingBottom:"100px"}} >
+    <div style={employee["Gender"]==="Female"?{backgroundColor:"#000",paddingBottom:"100px"}:{backgroundColor:"#000",paddingBottom:"100px"}} >
         <div className="jumbotron">
             <div className="container-fluid">
                 <div className="row">
@@ -38,7 +38,7 @@ function Employee(){
                         <div className="accordion" id="accordionExample">
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="headingOne">
-                                <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F"}:{backgroundColor:"#2cafece5"}}>
+                                <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#fff"}:{backgroundColor:"#fff"}}>
                                     <div className=" row card-header">
                                         <div className="col-12 col-md-4" data-bs-toggle="collapse" data-bs-target="#collapseOne"><img src={person} alt="sandy" width="200px" height="200px"/> </div> 
                                         <div className="col-12 col-md-8" style={{color: "black"}}> 
@@ -46,6 +46,10 @@ function Employee(){
                                         <footer className="blockquote-footer">
                                             <cite className="p-1 text-dark" title="Source Title">{employee["designation"]}</cite>
                                         </footer>
+                                        <p className="d-inline" style={{fontSize:"20px"}}>Employee Id : {employee["EmpId"]}</p> <br/>
+                                        <p className="d-inline" style={{fontSize:"20px"}}>Phone : {employee["contactNumber"]}</p> <br/>
+                                        <p className="d-inline" style={{fontSize:"20px"}}>Mail Id : </p><a href={mail} style={{fontSize:"20px"}}>{employee["tcsMail"]}</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -55,13 +59,13 @@ function Employee(){
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
-                        <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#FE889F"}:{backgroundColor:"#2cafece5"}}>
+                        <div className="card" style={employee["Gender"]==="Female"?{backgroundColor:"#fff"}:{backgroundColor:"#fff"}}>
                             <div className="card-header">
                                 <a href={teams} className="btn mx-1 text-white" style={{backgroundColor:"rgb(137, 88, 228)",fontSize:"20px"}}> <SiMicrosoftteams/> </a>
                                 {/* <a className="btn btn-primary mx-1" href="http://www.linkedin.com/in/sandeepshades88/"> <i className="bi bi-linkedin"></i> </a> */}
                                 <a className="btn btn-danger mx-1" href={mail}> <i className="bi bi-envelope-plus"></i> </a>
-                                <a href={tel} className="btn btn-secondary mx-1"> <i className="bi bi-telephone-outbound"></i> </a>
-                                <a  className="btn btn-success mx-1" href={wa} style={{border: "1px solid"}}> <i className="bi bi-whatsapp"></i> </a>
+                                <a href={tel} className="btn btn-secondary mx-1" onClick={() => alert(tel)}> <i className="bi bi-telephone-outbound"></i> </a>
+                                {/* <a  className="btn btn-success mx-1" href={wa} style={{border: "1px solid"}}> <i className="bi bi-whatsapp"></i> </a> */}
                                 <EditEmployee employee = {employee}/>
                             </div>
                         </div>  
@@ -73,14 +77,16 @@ function Employee(){
             </div>
         </div>
 
-        
+        <hr className="text-white"/>
         <nav aria-label="breadcrumb" className=" mx-5 my-2">
           <ol className="breadcrumb">
-            <li className="breadcrumb-item"><Link className="text-dark" to="/dashboard" state={{"data": data}}>Home</Link></li>
-            <li className="breadcrumb-item"><Link className="text-dark" to={`/${employee["Lab"]}`} state={{"data": data}}>{employee["Lab"]}</Link></li>
-            <li className="breadcrumb-item active text-dark" aria-current="page">{employee["empName"]}</li>
+            <li className="breadcrumb-item"><Link className="text-white" to="/dashboard" state={{"data": data}}>Home</Link></li>
+            <li className="breadcrumb-item"><Link className="text-white" to={`/${employee["Lab"]}`} state={{"data": data}}>{employee["Lab"]}</Link></li>
+            <li className="breadcrumb-item active text-white" aria-current="page">{employee["empName"]}</li>
           </ol>
         </nav>
+
+        
 
         <div className="container">
             <div className="row row-content">

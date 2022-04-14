@@ -51,7 +51,7 @@ console.log(demand)
     <>
      
      <Navbar/>
-     <div className='pad8' style={
+     <div className='mar8' style={
 Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
 ( Lab === 'Loans' ? {backgroundImage:`url(${Loans})`} :
   (Lab === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
@@ -70,11 +70,11 @@ Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
                         </nav>
                         
                     </div>
-        <div className="table-responsive mx-auto my-2  col-md-10 pad6" >
+        <div className="table-responsive mx-auto my-2  col-md-10 mar6" >
       
        <h2 className="p4 text-center"><strong> Demand Details</strong></h2>
         
-        <table className="table table-striped table-hover table-bordered pad5 " >
+        <table className="table table-striped table-hover table-bordered mar5 " >
         <thead className="table-dark">
             <tr>
                 <th className='text-center'><strong>S.no</strong></th>

@@ -40,7 +40,7 @@ export default function Download() {
 
     return (
         <div>
-        <button onClick={onDownload} className="btn btn-success"> <i class="bi bi-cloud-download"></i>  Download
+        <button onClick={onDownload} className="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to download the following data as Excel Sheet." > <i class="bi bi-cloud-download"></i>  Download
         </button>
         </div>
     )

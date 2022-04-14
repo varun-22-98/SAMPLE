@@ -114,7 +114,7 @@ function dateDiffInDays(a, b) {
                     <div className="form-floating mb-3">
                             
                             <input type="number" className="form-control  shadow border border-black rounded autocomplete-off" id="EMPID"  placeholder="Enter the EP ID/EMP ID" {...register("EMPID",{required:"EP/EMP ID  are required"})} onKeyUp={() => { trigger("EMPID");}}/>
-                            <label htmlFor="EMPID" className="d-inline " ><small>EP ID/EMP ID</small></label>
+                            <label htmlFor="EMPID" className="d-inline " >EP ID/EMP ID</label>
                             {errors.EMPID && (<small className='text-danger'>{errors.EMPID.message}</small>)}
                     </div>
                     <div className="form-floating mb-3">

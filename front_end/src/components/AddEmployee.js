@@ -18,7 +18,7 @@ console.log(errors);
 
   return (
     <>
-    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal tooltip" data-bs-placement="top" title="Click here to add a employee details to the database" data-bs-target="#exampleModal">
     <i className="bi bi-person-plus-fill"></i> Add Employee
     </button>
 

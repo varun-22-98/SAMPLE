@@ -19,20 +19,20 @@ signOut(auth).then(() => {
   }
  
   return (
-    <nav className="navbar dark text-white fixed-top">
+    <nav className="navbar dark1 text-white fixed-top">
             <div className="container-fluid">
                     
-                    <a className="navbar-brand mr-auto col-1" href="#!"><img className="px-3 med" src={tcslogo} alt="TCS-logo" height="60" width="250"/></a>
+                    <a className="navbar-brand mr-auto col-1" href="#!"><img className="px-3 med1" src={tcslogo} alt="TCS-logo" height="60" width="250"/></a>
                     
                     <div className="col-1 "></div>
                     
                      
                     <div className="col-5 col-md-6">
-                      <h4 className="h4"> Onboarding and customer communications (OCC) </h4>
+                      <h4 className="h41"> Onboarding and customer communications (OCC) </h4>
                     </div>
                    
 
-<button className="btn btn-danger button1 col-2 col-md-1" onClick={() => onLogout()}> Logout </button>
+<button className="btn btn-danger button11 col-2 col-md-1" onClick={() => onLogout()}> Logout </button>
 
                 
             </div>
@@ -41,7 +41,7 @@ signOut(auth).then(() => {
       // <nav className="navbar dark text-white fixed-top">
       //       <div className="container-fluid">
                     
-      //               <a className="navbar-brand mr-auto col-3" href="#!"><img className="px-3 med" src={tcslogo} alt="TCS-logo" height="60" width="250"/></a>
+      //               <a className="navbar-brand mr-auto col-3" href="#!"><img className="px-3 med1" src={tcslogo} alt="TCS-logo" height="60" width="250"/></a>
                     
       //               <div className="col-1 col-md-3"></div>
                     

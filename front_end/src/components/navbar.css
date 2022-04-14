@@ -27,6 +27,12 @@
 .dark{
     background-color: #000;
 }
+.center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;  
+  }
 
 @media screen and (min-width: 632px){
     .togg{

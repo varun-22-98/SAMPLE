@@ -1,6 +1,6 @@
 import React from "react";
 import zoomerskool from "../images/zoomerskool.png";
-import NavBarDashboad from "./NavBarDashboad";
+import NavBarSecondPage from "./NavBarSecondPage";
 import './SecondPage.css';
 import {Link} from 'react-router-dom'
 
@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 export default function SecondPage(){
     return(
         <>
-            <NavBarDashboad/>
+            <NavBarSecondPage/>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12 col-md-6 contain">

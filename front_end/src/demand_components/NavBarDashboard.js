@@ -1,5 +1,5 @@
 import React from 'react';
-import tcslogo from '../images/tcs.png';
+import tcs from '../images/tcs.png';
 import { getAuth, signOut } from "firebase/auth";
 import authinit from './authinit.js';
 import {useNavigate} from 'react-router-dom'
@@ -24,7 +24,7 @@ signOut(auth).then(() => {
   }
   return (
 <>  
-    <nav className="navbar dark text-white fixed-top">
+    <nav className="navbar dark1 text-white fixed-top">
     <div className="container-fluid">
 
 
@@ -35,19 +35,19 @@ signOut(auth).then(() => {
 
         
             
-        <a className="navbar-brand mr-auto col-3" href="#!"><img className="px-3 med" src={tcslogo} alt="TCS-logo" height="60" width="250"/></a>
+        <a className="navbar-brand mr-auto col-3" href="#!"><img className="px-3 med1" src={tcs} alt="TCS-logo" height="60" width="250"/></a>
         
         <div className="col-md-1"></div>
         
         <div className="col-5 col-md-6">
-            <h4 className="h4"> Onboarding and customer communications (OCC) </h4>
+            <h4 className="h41"> Onboarding and customer communications (OCC) </h4>
         </div>
 
-        <button className="btn btn-danger button1 col-2 col-md-1" onClick={() => onLogout()}> Logout </button>
+        <button className="btn btn-danger button11 col-2 col-md-1" onClick={() => onLogout()}> Logout </button>
     </div>
 </nav>
 
- <div className="collapse togg" id="navbarToggleExternalContent">
+ <div className="collapse togg1" id="navbarToggleExternalContent">
     <div className="container-fluid text-white">
         {/* <div className="row mx-5 ">
             <div className="col-3 col-md-3 padd1 ml-auto"><Demand/> </div>
@@ -56,9 +56,9 @@ signOut(auth).then(() => {
             
         </div> */}
          <div className="row ">
-            <div className="col-6 col-md offset-md-1 padd1"><Demand/> </div>
-            <div className="col-6 col-md offset-md-1 padd1"><Supply/> </div>
-            <div className="col-6 col-md offset-md-1 padd1"><Email tabledata={tabledata}/> </div>
+            <div className="col-6 col-md offset-md-1 padd11"><Demand/> </div>
+            <div className="col-6 col-md offset-md-1 padd11"><Supply/> </div>
+            <div className="col-6 col-md offset-md-1 padd11"><Email tabledata={tabledata}/> </div>
             
         </div>
     </div>

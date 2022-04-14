@@ -84,7 +84,7 @@ export default function Sourcing() {
         <div className="d-grid gap-2 d-md-flex justify-content-md-end pe-3" >
             {/* <AddDetails /> */}
             {/* <Sample showAlert={showAlert} /> */}
-            <Sample />
+            {/* <Sample /> */}
             <Download supplyData='getSupply' fileName='SupplyDetails' />
             {/* <Form /> */}
         </div>

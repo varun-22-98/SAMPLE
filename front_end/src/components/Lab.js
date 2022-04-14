@@ -3,7 +3,7 @@ import axios from 'axios';
 import Lloyds from '../images/Lloyds.png'
 import {Link, useLocation} from 'react-router-dom'
 import Search from './Search'
-import NavBarDashboad from './NavBarDashboad';
+import NavBarDashboad from './NavBarEmployeeDetails';
 import './Lab.css';
 import { IMAGES } from '../shared/images';
 import Cards from "../images/cards.png";

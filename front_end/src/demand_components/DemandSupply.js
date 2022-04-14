@@ -506,13 +506,13 @@ const tabledata = [
                
        
       
-      <div className='container-fluid pad4'>
+      <div className='container-fluid mar4'>
        <div className='row '>
           
-       <div className="table-responsive mx-auto my-5 pt-5 col-md-10 text-center pad6" >
+       <div className="table-responsive mx-auto my-5 pt-5 col-md-10 text-center mar6" >
            <h2 className="p4 text-white"><strong>OCC-Demand and Supply Dashboard</strong></h2>
         
-        <table className="table table-striped table-hover table-bordered  pad5 " >
+        <table className="table table-striped table-hover table-bordered  mar5 " >
         
         <thead className="table-dark">
         <tr>
