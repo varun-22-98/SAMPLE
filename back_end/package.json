@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "dotenv": "^15.0.0",
     "express": "^4.17.2",
+    "jquery.otherdropdown": "^1.2.2",
     "mongodb": "3.5",
     "nodemon": "^2.0.15"
   }

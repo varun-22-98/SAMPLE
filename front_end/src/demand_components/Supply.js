@@ -83,7 +83,7 @@ function dateDiffInDays(a, b) {
                     
                     <div className="form-floating mb-3">
                     <select defaultValue={'Source'} id='Source' className="form-select shadow border border-black rounded"  {...register("Source",{required:"Source is required"})}>
-                              <option value="Source" hidden >select source</option>
+                              <option value="Source" hidden >Select Source</option>
                                 <option value="Internal">Internal</option>
                                 <option value="UK EP">UK EP</option>
                                 <option value="External - EP">External - EP</option>
@@ -143,7 +143,7 @@ function dateDiffInDays(a, b) {
                     <div className="form-floating mb-3">
                             
                             <select defaultValue={'Lab'}  className="form-select shadow border border-black rounded"  {...register("Lab",{required:"Lab is required"})}>
-                            <option value="Lab" hidden >select lab</option>
+                            <option value="Lab" hidden >Select Lab</option>
                               <option value="Cards">Cards</option>
                               <option value="Loans">Loans</option>
                               <option value="Banking">Banking</option>
@@ -159,7 +159,8 @@ function dateDiffInDays(a, b) {
                            
                            <div className="form-floating mb-3">
                             
-                            <select  className="form-select shadow border border-black rounded"  {...register("Role1",{required:"Role is required"})}>
+                            <select  defaultValue={'Role1'} className="form-select shadow border border-black rounded"  {...register("Role1",{required:"Role is required"})}>
+                            <option value="Role1" hidden >Select Role</option>
                             <option value="Architect">Architect</option>
                                 <option value="Business Analyst">Business Analyst</option>
                                 <option value="Scrum Master">Scrum Master</option>
@@ -186,7 +187,7 @@ function dateDiffInDays(a, b) {
         
                     <div className="form-floating mb-3">
                     <select defaultValue={'Location'} className="form-select shadow border border-black rounded"  {...register("Location",{required:"Location is required"})}>
-                            <option value="Location" hidden >select location</option>
+                            <option value="Location" hidden >Select Location</option>
                               <option value="Onshore">Onshore</option>
                               <option value="Offshore">Offshore</option>
                             </select>

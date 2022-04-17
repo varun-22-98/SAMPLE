@@ -7,7 +7,7 @@ import {TiGroup} from 'react-icons/ti'
 import * as ReactBootStrap from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import {MdAlternateEmail} from 'react-icons/md';
-
+import Alert from '../supply_components/Alert';
 
 import axios from 'axios';
 // import SourceLab from './SourceLab';
@@ -21,7 +21,17 @@ import NavBarDashboard from './NavBarDashboard';
 
 export default function DemandSupply() {
     
- 
+    const [alert,setAlert] = useState(null);
+
+    const showAlert = (msg,type) =>{
+      setAlert({ msg , type })
+      setTimeout(()=> {
+        setTimeout(()=> {
+          window.location.reload(false)
+        },500)
+        setAlert(null)
+      },2000)
+    };
 
    
    
@@ -575,7 +585,7 @@ const tabledata = [
           
        <div className="table-responsive mx-auto my-5 pt-5 col-md-10 text-center mar6" >
            <h2 className="p4 text-white"><strong>OCC-Demand and Supply Dashboard</strong></h2>
-        
+        <Alert alert={alert} />
         <table className="table table-striped table-hover table-bordered  mar5 " >
         
         <thead className="table-dark">
@@ -584,7 +594,7 @@ const tabledata = [
             <th scope="col" className="text-center " ><strong>Labs</strong></th>
             <th scope="col" colSpan="2" className="text-center "><Link to="/DemandDetails" className="text-decoration-none text-white"><strong>Demand</strong></Link></th>
             <th scope="col" colSpan="2" className="text-center "><Link to="/Sourcing"  className="text-decoration-none text-white" state={{"demand": demand}}><strong>Supply</strong></Link></th>
-            <th scope="col" colSpan="2" className="text-center "><strong>Fulfilled</strong></th>
+            <th scope="col" colSpan="2" className="text-center "><strong><Link to="/Fullfilled" className="text-decoration-none text-white"  >Fulfilled</Link></strong></th>
 
            
         </tr>

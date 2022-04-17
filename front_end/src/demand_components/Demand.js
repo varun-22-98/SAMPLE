@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import './Demand.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-// import Alert from './Alert';
+
 
 
 
@@ -15,6 +15,7 @@ export default function Demand() {
     //   setAlert({msg,type})
     //   setTimeout(()=>setAlert(null),5000)
     // }
+    let alertWhenChanged = () => alert('Form Submitted');
      const onSubmit = (data,e) =>{
        e.preventDefault();
         
@@ -26,7 +27,9 @@ export default function Demand() {
         
         console.log(demand);
         //alert("Demand Form submitted Successfully");
-
+     
+        
+        
       };
   return (
     <>
@@ -41,7 +44,7 @@ export default function Demand() {
           </div>
           
           <div className="modal-body">
-            <form className="col-12" onSubmit={handleSubmit(onSubmit,)} >
+            <form className="col-12" onSubmit={handleSubmit(onSubmit,alertWhenChanged)} >
               <div className='row '>
                 <div className='col-12 '></div>
                   <div className='col '>
@@ -65,12 +68,11 @@ export default function Demand() {
                                 <option value="Devops Engineer">Devops Engineer</option>
                                 <option value="Mobile Tester">Mobile Tester</option>
                                 <option value="Java Developer">Java Developer</option>
-                                <option value="Data Scientist">Data Scientist</option>
-                                <option value="Project Manager">Project Manager</option>
-                                <option value="Delivery Head">Delivery Head</option>
-                                <option value="Release Manager">Release Manager</option>
+                                <option value="other">Other</option>
                             </select>
                             <label className="pr-3 " htmlFor="Role" name="Role">Role </label>
+                           
+ 
                             </div>
                      {/* <div className="form-floating mb-3">
                              <input type="text" className="form-control shadow border border-black rounded" id="RequiredSkills"  placeholder="Enter the Required Skill"  {...register("RequiredSkill",{required:"Required Skills are required"})} onKeyUp={() => { trigger("RequiredSkills");}}/>
@@ -82,25 +84,30 @@ export default function Demand() {
                             
                             <select defaultValue={'SelectRequiredSkill'} className="form-select shadow border border-black rounded"  {...register("RequiredSkill",{required:"Required Skills are required"})}>
                                
-                                <option value="SelectRequiredSkill" hidden>Select Required Skill</option>
+                                <option value="SelectRequiredSkill" hidden onChange = "EnableDisableTextBox(this)">Select Required Skill</option>
                                 <option value="React">React</option>
                                 <option value="Vue">Vue</option>
                                 <option value="Angular">Angular</option>
                                 <option value="Nodejs">Nodejs</option>
-                                <option value="MERN">Quality Engineer</option>
-                                <option value="MEAN">IOS Developer</option>
-                                <option value="Kotlin">Windows Admin</option>
-                                <option value="Flutter">Product Owner</option>
-                                <option value="Java">Android Developer</option>
-                                <option value="Swift">Full Stack Developer</option>
-                                <option value="HTML CSS JS">UX Designer</option>
-                                <option value="Mavens">Devops Engineer</option>
-                                <option value="Jenkins">Mobile Tester</option>
-                                <option value="Python">Java Developer</option>
+                                <option value="MERN">MERN</option>
+                                <option value="MEAN">MEAN</option>
+                                <option value="Kotlin">Kotlin</option>
+                                <option value="Flutter">Flutter</option>
+                                <option value="Java">Java</option>
+                                <option value="Swift">Swift</option>
+                                <option value="HTML CSS JS">HTML CSS JS</option>
+                                <option value="Mavens">Mavens</option>
+                                <option value="Jenkins">Jenkins</option>
+                                <option value="Python">Python</option>
+                                <option value="Django">Django</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Analytical Ability">Analytical Ability</option>
                                 <option value="other">Other</option>
                                 
                             </select>
                             <label className="pr-3 " htmlFor="RequiredSkill" name="RequiredSkill">Required Skills </label>
+                            
+ 
                             </div>
                     <div className="form-floating mb-3">
                              <input type="number" className="form-control shadow border border-black rounded" id="NoofPosition"  placeholder="Enter the No of Positions"  {...register("NoofPosition",{required:"No of Positions are required"})} onKeyUp={() => { trigger("NoofPosition");}}/>
@@ -142,7 +149,7 @@ export default function Demand() {
                             <label className="pr-3"  htmlFor="DemandType" name="DemandType">Demand Type </label>
                     </div>
                     <div className="text-center ">
-                    <button className='btn btn-primary'>Submit</button>
+                    <button onClick={ alertWhenChanged} className='btn btn-primary'>Submit </button>
                     </div>
               
                   

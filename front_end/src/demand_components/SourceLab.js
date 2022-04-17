@@ -53,11 +53,13 @@ console.log(demand)
      <Navbar/>
      <div className='mar8' style={
 
-Lab === 'Other'? {backgroundimage:`url(${Demandsupply})`}:     
-Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
-( Lab === 'Loans' ? {backgroundImage:`url(${Loans})`} :
-  (Lab === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
-  (Lab === 'Savings' ? {backgroundImage:`url(${Savings})`} :  {backgroundimage:`url(${Demandsupply})`} )))
+    
+Lab === 'Cards' ? {backgroundImage:`url(${Demandsupply})`} :
+// ( Lab === 'Loans' ? {backgroundImage:`url(${Loans})`} :
+//   (Lab === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
+//   (Lab === 'Savings' ? {backgroundImage:`url(${Savings})`} : 
+ {backgroundimage:`url(${Demandsupply})`}
+ // )))
 }>
      <div className='container-fluid '>
      
@@ -74,7 +76,7 @@ Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
                     </div>
         <div className="table-responsive mx-auto my-2  col-md-10 mar6" >
       
-       <h2 className="p4 text-center"><strong> Demand Details</strong></h2>
+       <h2 className="p4 text-center text-white"><strong> Demand Details</strong></h2>
         
         <table className="table table-striped table-hover table-bordered mar5 " >
         <thead className="table-dark">
@@ -105,7 +107,7 @@ Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
                 <td ><strong>{d.Role}</strong> </td>
                 <td  ><strong>{d.RequiredSkill}</strong></td>
                 <td ><strong>{d.Location}</strong> </td>
-                <td><strong>{d.NoofPosition}</strong></td>
+                <td className='text-center'><strong>{d.NoofPosition}</strong></td>
                 
             </tr>))} 
             

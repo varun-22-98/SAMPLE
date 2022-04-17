@@ -14,6 +14,7 @@ import DemandSupply from './demand_components/DemandSupply';
 import SourceLab from './demand_components/SourceLab';
 import './App.css';
 import Sourcing from './supply_components/Sourcing';
+import Fullfilled from './supply_components/Fullfilled';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -50,6 +51,7 @@ ReactDOM.render(
         <Route path="/Personalisation1" element={<SourceLab Lab="Personalisation"/>}/> */}
         <Route path="/DemandDetails" element={<SourceLab />}/>
         <Route path="/Sourcing" element={<Sourcing/>}/>
+        <Route path="/Fullfilled" element={<Fullfilled/>}/>
       </Route>
       {/* <Route path="*" element={<Navigate replace to="/" />} /> */}
     </Routes>
