@@ -27,6 +27,10 @@ export default function Email({tabledata}) {
     
     
     exportToCSV(tabledata);
+    const mailto: string =
+    "mailto:?subject=Result" ;
+   window.location.href=mailto;
+ 
 
   }
   

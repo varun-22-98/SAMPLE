@@ -26,6 +26,7 @@ ReactDOM.render(
       <Route element={<Protected/>}>
         <Route path='/second' element={<SecondPage/>}/>
         <Route path="/dashboard" element={<App/>}/>
+       
         <Route path="/cards" element={<Lab title="Cards"/>}/>
         <Route path="/loans" element={<Lab title="Loans"/>}/>
         <Route path="/banking" element={<Lab title="Banking"/>}/>

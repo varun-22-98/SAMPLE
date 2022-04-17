@@ -30,7 +30,7 @@ export default function Demand() {
       };
   return (
     <>
-    <button type="button" className="btn btn-primary btn-round w-50 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-briefcase"></i>   Demand
+    <button type="button" className="btn btn-primary btn-round w-50 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="bi bi-briefcase"></i>   Demand
     </button>
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md">
@@ -48,8 +48,9 @@ export default function Demand() {
                      
                      <div className="form-floating mb-3">
                             
-                            <select  className="form-select shadow border border-black rounded"  {...register("Role",{required:"Role is required"})}>
+                            <select defaultValue={'SelectRole'} className="form-select shadow border border-black rounded"  {...register("Role",{required:"Role is required"})}>
                                
+                                <option value ="SelectRole" hidden>Select Role</option>
                                 <option value="Business Analyst">Business Analyst</option>
                                 <option value="Scrum Master">Scrum Master</option>
                                 <option value="BackEnd Engineer">BackEnd Engineer</option>
@@ -79,8 +80,9 @@ export default function Demand() {
                     </div> */}
                       <div className="form-floating mb-3">
                             
-                            <select  className="form-select shadow border border-black rounded"  {...register("RequiredSkill",{required:"Required Skills are required"})}>
+                            <select defaultValue={'SelectRequiredSkill'} className="form-select shadow border border-black rounded"  {...register("RequiredSkill",{required:"Required Skills are required"})}>
                                
+                                <option value="SelectRequiredSkill" hidden>Select Required Skill</option>
                                 <option value="React">React</option>
                                 <option value="Vue">Vue</option>
                                 <option value="Angular">Angular</option>
@@ -95,10 +97,8 @@ export default function Demand() {
                                 <option value="Mavens">Devops Engineer</option>
                                 <option value="Jenkins">Mobile Tester</option>
                                 <option value="Python">Java Developer</option>
-                                <option value="Data Scientist">Data Scientist</option>
-                                <option value="Project Manager">Project Manager</option>
-                                <option value="Delivery Head">Delivery Head</option>
-                                <option value="Release Manager">Release Manager</option>
+                                <option value="other">Other</option>
+                                
                             </select>
                             <label className="pr-3 " htmlFor="RequiredSkill" name="RequiredSkill">Required Skills </label>
                             </div>
@@ -110,8 +110,9 @@ export default function Demand() {
                     </div>
                     <div className="form-floating mb-3">
                             
-                            <select  className="form-select shadow border border-black rounded"  {...register("Labs",{required:"Lab is required"})}>
+                            <select defaultValue={'SelectLab'} className="form-select shadow border border-black rounded"  {...register("Labs",{required:"Lab is required"})}>
                                
+                                <option value="SelectLab">Select Lab</option>
                                 <option value="Cards">Cards</option>
                                 <option value="Loans">Loans</option>
                                 <option value="Banking">Banking</option>

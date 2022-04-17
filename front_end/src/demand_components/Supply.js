@@ -30,12 +30,12 @@ function dateDiffInDays(a, b) {
    
     const {register, control,handleSubmit,formState:{errors},reset,trigger} = useForm();
     const onSubmit = (data) =>{
-      var a = new Date(data.sourcereceiveddate)
-      var b = new Date(data.receivedevaluationon)
-      var difference = dateDiffInDays(a, b);
-        data.datediff = difference;
-        console.log(data);
-        const supply = {"data": data}
+      // var a = new Date(data.sourcereceiveddate)
+      // var b = new Date(data.receivedevaluationon)
+      // var difference = dateDiffInDays(a, b);
+      //   data.datediff = difference;
+      //   console.log(data);
+       const supply = {"data": data}
         axios.post('http://localhost:7000/addSupply', supply)
         window.location.reload(false);
         reset();

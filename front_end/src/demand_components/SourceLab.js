@@ -52,6 +52,8 @@ console.log(demand)
      
      <Navbar/>
      <div className='mar8' style={
+
+Lab === 'Other'? {backgroundimage:`url(${Demandsupply})`}:     
 Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
 ( Lab === 'Loans' ? {backgroundImage:`url(${Loans})`} :
   (Lab === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
@@ -64,8 +66,8 @@ Lab === 'Cards' ? {backgroundImage:`url(${Cards})`} :
        <div >
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item text-dark"><Link to="/DemandSupply" className='text-dark text-decoration-none'><strong>Demand and Supply Dash</strong></Link></li>
-                                <li className="breadcrumb-item active text-dark fw-weight-bold" aria-current="page"><strong>{Lab}</strong></li>
+                                <li className="breadcrumb-item text-dark"><Link to="/DemandSupply" className='text-dark text-decoration-none'><strong>Demand and Supply Dashboard</strong></Link></li>
+                                <li className="breadcrumb-item active text-dark fw-weight-bold" aria-current="page"><strong>Demand Details</strong></li>
                             </ol>
                         </nav>
                         

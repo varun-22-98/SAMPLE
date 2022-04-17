@@ -41,7 +41,7 @@ export default function DemandSupply() {
 
     }])
     useLayoutEffect(() => {
-        axios.get('http://localhost:7000/getsupply')
+        axios.get('http://localhost:7000/getSupply')
         .then(response => setSupply(response.data))
         .catch((err) => {console.log(err)});
         
@@ -66,67 +66,131 @@ export default function DemandSupply() {
     ////////////////////////////for loop for fullfilled column////////////////////////////////////////////////////
     for(let s of supply)
     {
-        if(s.Labs1==="Banking" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // if(s.Labs1==="Banking" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     bankingfulon+=1;
+        // }
+        // if(s.Labs1==="Banking" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     bankingfuloff+=1;
+        // }
+        // if(s.Labs1==="Cards" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     cardsfuloff+=1;
+        // }
+        // if(s.Labs1==="Cards" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     cardsfulon+=1;
+        // }
+        // if(s.Labs1==="Savings" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     savingsfuloff+=1;
+        // }
+        // if(s.Labs1==="Savings" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     savingsfulon+=1;
+        // }
+        // if(s.Labs1==="Loans" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     loansfulon+=1;
+        // }
+        // if(s.Labs1==="Loans" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     loansfuloff+=1;
+        // }
+        // if(s.Labs1==="OIE" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     oiefuloff+=1;
+        // }
+        // if(s.Labs1==="OIE" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     oiefulon+=1;
+        // }
+        // if(s.Labs1==="Digi.Comms" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     digicommsfuloff+=1;
+        // }
+        // if(s.Labs1==="Digi.Comms" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     digicommsfulon+=1;
+        // }
+        // if(s.Labs1==="Doc.Services" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     docservicefuloff+=1;
+        // }
+        // if(s.Labs1==="Doc.Services" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     docservicefulon+=1;
+        // }
+        // if(s.Labs1==="Personalisation" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     personalisationfuloff+=1;
+        // }
+        // if(s.Labs1==="Personalisation" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        // {
+        //     personalisationfulon+=1;
+        // }
+        if(s.Lab==="Banking" && (s.Location==="Onshore")&&(s.Selection_Status==="Selected"))
         {
             bankingfulon+=1;
         }
-        if(s.Labs1==="Banking" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Banking" && (s.Location==="Offshore") && (s.Selection_Status==="Selected")) 
         {
             bankingfuloff+=1;
         }
-        if(s.Labs1==="Cards" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Cards" && (s.Location==="Offshore" )&& (s.Selection_Status==="Selected")) 
         {
             cardsfuloff+=1;
         }
-        if(s.Labs1==="Cards" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Cards" && (s.Location==="Onshore" )&& (s.Selection_Status==="Selected")) 
         {
             cardsfulon+=1;
         }
-        if(s.Labs1==="Savings" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Savings" && (s.Location==="Offshore") && (s.Selection_Status==="Selected")) 
         {
             savingsfuloff+=1;
         }
-        if(s.Labs1==="Savings" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Savings" && (s.Location==="Onshore") && (s.Selection_Status==="Selected")) 
         {
             savingsfulon+=1;
         }
-        if(s.Labs1==="Loans" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Loans" && (s.Location==="Onshore") && (s.Selection_Status==="Selected")) 
         {
             loansfulon+=1;
         }
-        if(s.Labs1==="Loans" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Loans" && (s.Location==="Offshore") && (s.Selection_Status==="Selected")) 
         {
             loansfuloff+=1;
         }
-        if(s.Labs1==="OIE" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Labs==="OIE" && (s.Location==="Offshore") && (s.Selection_Status==="Selected")) 
         {
             oiefuloff+=1;
         }
-        if(s.Labs1==="OIE" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="OIE" && (s.Location==="Onshore") && (s.Selection_Status==="Selected")) 
         {
             oiefulon+=1;
         }
-        if(s.Labs1==="Digi.Comms" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Digi.Comms" && (s.Location==="Offshore") && (s.Selection_Status==="Selected")) 
         {
             digicommsfuloff+=1;
         }
-        if(s.Labs1==="Digi.Comms" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Digi.Comms" && (s.Location==="Onshore") && (s.Selection_Status==="Selected")) 
         {
             digicommsfulon+=1;
         }
-        if(s.Labs1==="Doc.Services" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Doc.Services" && (s.Location==="Offshore") && (s.Selection_Status==="Selected"))
         {
             docservicefuloff+=1;
         }
-        if(s.Labs1==="Doc.Services" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Doc.Services" && (s.Location==="Onshore") && (s.Selection_Status==="Selected")) 
         {
             docservicefulon+=1;
         }
-        if(s.Labs1==="Personalisation" && (s.Location1==="Offshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Personalisation" && (s.Location==="Offshore" )&& (s.Selection_Status==="Selected")) 
         {
             personalisationfuloff+=1;
         }
-        if(s.Labs1==="Personalisation" && (s.Location1==="Onshore" && ((s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="No") || (s.Profileselected ==="Yes" && s.CustomerEvaluationReq ==="Yes" && s.CustomerSelection === "Yes")))) 
+        if(s.Lab==="Personalisation" && (s.Location==="Onshore" )&& (s.Selection_Status==="Selected")) 
         {
             personalisationfulon+=1;
         }
@@ -195,24 +259,24 @@ var r = demand.filter((d) => d["Location"]==="Offshore");
 var q = demand.filter((d) => d["Location"]==="Onshore");
 
 
-var vs = supply.filter((d) => d["Labs1"] === "Cards" & d["Location1"]==="Offshore");
-var as = supply.filter((d) => d["Labs1"] === "Cards" & d["Location1"]==="Onshore");
-var bs = supply.filter((d) => d["Labs1"] === "Banking" & d["Location1"]==="Offshore");
-var cs = supply.filter((d) => d["Labs1"] === "Banking" & d["Location1"]==="Onshore");
-var ps = supply.filter((d) => d["Labs1"] === "Loans" & d["Location1"]==="Offshore");
-var es = supply.filter((d) => d["Labs1"] === "Loans" & d["Location1"]==="Onshore");
-var fs = supply.filter((d) => d["Labs1"] === "Savings" & d["Location1"]==="Offshore");
-var gs = supply.filter((d) => d["Labs1"] === "Savings" & d["Location1"]==="Onshore");
-var hs=supply.filter((d) => d["Labs1"] === "Personalisation" & d["Location1"]==="Offshore");
-var is = supply.filter((d) => d["Labs1"] === "Personalisation" & d["Location1"]==="Onshore");
-var js = supply.filter((d) => d["Labs1"] === "Digi.Comms" & d["Location1"]==="Offshore");
-var ks =supply.filter((d) => d["Labs1"] === "Digi.Comms" & d["Location1"]==="Onshore");
-var ls =supply.filter((d) => d["Labs1"] === "Doc.Services" & d["Location1"]==="Offshore");
-var ms =supply.filter((d) => d["Labs1"] === "Doc.Services" & d["Location1"]==="Onshore");
-var ns = supply.filter((d) => d["Labs1"] === "OIE" & d["Location1"]==="Offshore");
-var os =supply.filter((d) => d["Labs1"] === "OIE" & d["Location1"]==="Onshore");
-var rs = supply.filter((d) => d["Location1"]==="Offshore");
-var qs = supply.filter((d) => d["Location1"]==="Onshore");
+var vs = supply.filter((d) => d["Lab"] === "Cards" & d["Location"]==="Offshore");
+var as = supply.filter((d) => d["Lab"] === "Cards" & d["Location"]==="Onshore");
+var bs = supply.filter((d) => d["Lab"] === "Banking" & d["Location"]==="Offshore");
+var cs = supply.filter((d) => d["Lab"] === "Banking" & d["Location"]==="Onshore");
+var ps = supply.filter((d) => d["Lab"] === "Loans" & d["Location"]==="Offshore");
+var es = supply.filter((d) => d["Lab"] === "Loans" & d["Location"]==="Onshore");
+var fs = supply.filter((d) => d["Lab"] === "Savings" & d["Location"]==="Offshore");
+var gs = supply.filter((d) => d["Lab"] === "Savings" & d["Location"]==="Onshore");
+var hs=supply.filter((d) => d["Lab"] === "Personalisation" & d["Location"]==="Offshore");
+var is = supply.filter((d) => d["Lab"] === "Personalisation" & d["Location"]==="Onshore");
+var js = supply.filter((d) => d["Lab"] === "Digi.Comms" & d["Location"]==="Offshore");
+var ks =supply.filter((d) => d["Lab"] === "Digi.Comms" & d["Location"]==="Onshore");
+var ls =supply.filter((d) => d["Lab"] === "Doc.Services" & d["Location"]==="Offshore");
+var ms =supply.filter((d) => d["Lab"] === "Doc.Services" & d["Location"]==="Onshore");
+var ns = supply.filter((d) => d["Lab"] === "OIE" & d["Location"]==="Offshore");
+var os =supply.filter((d) => d["Lab"] === "OIE" & d["Location"]==="Onshore");
+var rs = supply.filter((d) => d["Location"]==="Offshore");
+var qs = supply.filter((d) => d["Location"]==="Onshore");
 
 
 
@@ -518,8 +582,8 @@ const tabledata = [
         <tr>
             <th scope="col" className="text-center "><strong>S.no</strong></th>
             <th scope="col" className="text-center " ><strong>Labs</strong></th>
-            <th scope="col" colSpan="2" className="text-center "><Link to="/DemandDetails"><strong>Demand</strong></Link></th>
-            <th scope="col" colSpan="2" className="text-center "><Link to="/Sourcing"  state={{"demand": demand}}><strong>Supply</strong></Link></th>
+            <th scope="col" colSpan="2" className="text-center "><Link to="/DemandDetails" className="text-decoration-none text-white"><strong>Demand</strong></Link></th>
+            <th scope="col" colSpan="2" className="text-center "><Link to="/Sourcing"  className="text-decoration-none text-white" state={{"demand": demand}}><strong>Supply</strong></Link></th>
             <th scope="col" colSpan="2" className="text-center "><strong>Fulfilled</strong></th>
 
            
