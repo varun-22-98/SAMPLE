@@ -45,22 +45,20 @@ console.log(demand)
    
    //console.log(d.location);
     //const 
-    var Lab='Cards';
+    
+  //demand=demand.filter((d)=>d["Location"]===Location);
     
   return (      
     <>
      
      <Navbar/>
-     <div className='mar8' style={
-
-    
-Lab === 'Cards' ? {backgroundImage:`url(${Demandsupply})`} :
+     <div className='mar8' 
 // ( Lab === 'Loans' ? {backgroundImage:`url(${Loans})`} :
 //   (Lab === 'Banking' ? {backgroundImage:`url(${Banking})`} : 
 //   (Lab === 'Savings' ? {backgroundImage:`url(${Savings})`} : 
- {backgroundimage:`url(${Demandsupply})`}
+
  // )))
-}>
+>
      <div className='container-fluid '>
      
        <div className='row '>

@@ -12,6 +12,7 @@ import ForgotPassword from './components/ForgotPassword';
 import SecondPage from './components/SecondPage';
 import DemandSupply from './demand_components/DemandSupply';
 import SourceLab from './demand_components/SourceLab';
+import  Demandonshoreoffshore from './demand_components/Demandonshoreoffshore';
 import './App.css';
 import Sourcing from './supply_components/Sourcing';
 import Fullfilled from './supply_components/Fullfilled';
@@ -41,14 +42,25 @@ ReactDOM.render(
         <Route path="/employee" element={<Employee />}/>
         <Route path="/demand" element={<DemandSupply/>}/>
         <Route path="/DemandSupply" element={<DemandSupply/>}/>
-        {/* <Route path="/Banking1" element={<SourceLab Lab="Banking"/>}/>
-        <Route path="/Cards1" element={<SourceLab Lab="Cards"/>}/>
-        <Route path="/Savings1" element={<SourceLab Lab="Savings"/>}/>
-        <Route path="/Loans1" element={<SourceLab Lab="Loans"/>}/>
-        <Route path="/Digicomms1" element={<SourceLab Lab="Digi.Comms"/>}/>
-        <Route path="/Docservices1" element={<SourceLab Lab="Doc.Services"/>}/>
-        <Route path="/OIE1" element={<SourceLab Lab="OIE"/>}/>
-        <Route path="/Personalisation1" element={<SourceLab Lab="Personalisation"/>}/> */}
+        <Route path="/Banking1" element={< Demandonshoreoffshore Lab="Banking" Location="Onshore"/>}/>
+        <Route path="/Cards1" element={< Demandonshoreoffshore Lab="Cards" Location="Onshore"/>}/>
+        <Route path="/Savings1" element={< Demandonshoreoffshore Lab="Savings" Location="Onshore"/>}/>
+        <Route path="/Loans1" element={< Demandonshoreoffshore Lab="Loans" Location="Onshore"/>}/>
+        <Route path="/Digicomms1" element={< Demandonshoreoffshore Lab="Digi.Comms" Location="Onshore"/>}/>
+        <Route path="/Docservices1" element={< Demandonshoreoffshore Lab="Doc.Services" Location="Onshore"/>}/>
+        <Route path="/OIE1" element={< Demandonshoreoffshore Lab="OIE" Location="Onshore"/>}/>
+        <Route path="/Personalisation1" element={< Demandonshoreoffshore Lab="Personalisation" Location="Onshore"/>}/> 
+       
+        
+
+        <Route path="/Banking2" element={< Demandonshoreoffshore Lab="Banking" Location="Offshore"/>}/>
+        <Route path="/Cards2" element={< Demandonshoreoffshore Lab="Cards" Location="Offshore"/>}/>
+        <Route path="/Savings2" element={< Demandonshoreoffshore Lab="Savings" Location="Offshore"/>}/>
+        <Route path="/Loans2" element={< Demandonshoreoffshore Lab="Loans" Location="Offshore"/>}/>
+        <Route path="/Digicomms2" element={< Demandonshoreoffshore Lab="Digi.Comms" Location="Offshore"/>}/>
+        <Route path="/Docservices2" element={< Demandonshoreoffshore Lab="Doc.Services" Location="Offshore"/>}/>
+        <Route path="/OIE2" element={< Demandonshoreoffshore Lab="OIE" Location="Offshore"/>}/>
+        <Route path="/Personalisation2" element={< Demandonshoreoffshore Lab="Personalisation" Location="Offshore"/>}/> 
         <Route path="/DemandDetails" element={<SourceLab />}/>
         <Route path="/Sourcing" element={<Sourcing/>}/>
         <Route path="/Fullfilled" element={<Fullfilled/>}/>

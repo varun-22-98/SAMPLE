@@ -41,21 +41,21 @@ export default function Fullfilled() {
         <table className="table table-striped table-hover table-bordered mar5 " >
         <thead className="table-dark">
             <tr>
-            <th className='text-center'><strong>S.no</strong></th>
-                <th className='text-center'><strong>Source</strong></th>
-                <th className='text-center'><strong>Location</strong></th>
-                <th className='text-center'><strong>Employee ID</strong></th>
-                <th className='text-center'><strong>Candidate Name</strong></th>
-                <th className='text-center'><strong>Lab</strong></th>
-                <th className='text-center'><strong>Role</strong></th>
-                <th className='text-center'><strong>Contact Number</strong></th>
-                <th className='text-center'><strong>Sent For Evaluation on</strong></th>
-                <th className='text-center'><strong>Received Evaluation on</strong></th>
-                <th className='text-center'><strong>Evaluation Pending</strong></th>
-                <th className='text-center'><strong>Evaluated By</strong></th>
-                <th className='text-center'><strong> Internal Evaluation Feedback</strong></th>
-                <th className='text-center'><strong>Customer Evaluation Date</strong></th>
-                <th className='text-center'><strong>Customer Evaluation Feedback</strong></th>
+            <th className='text-center align-middle'><strong>S.no</strong></th>
+                <th className='text-center align-middle'><strong>Source</strong></th>
+                <th className='text-center align-middle'><strong>Location</strong></th>
+                <th className='text-center align-middle'><strong>Employee ID</strong></th>
+                <th className='text-center align-middle'><strong>Candidate Name</strong></th>
+                <th className='text-center align-middle'><strong>Lab</strong></th>
+                <th className='text-center align-middle'><strong>Role</strong></th>
+                <th className='text-center align-middle v'><strong>Contact Number</strong></th>
+                <th className='text-center align-middle'><strong>Sent For Evaluation on</strong></th>
+                <th className='text-center align-middle'><strong>Received Evaluation on</strong></th>
+                <th className='text-center align-middle'><strong>Evaluation Pending</strong></th>
+                <th className='text-center align-middle'><strong>Evaluated By</strong></th>
+                <th className='text-center align-middle'><strong> Internal Evaluation Feedback</strong></th>
+                <th className='text-center align-middle'><strong>Customer Evaluation Date</strong></th>
+                <th className='text-center align-middle'><strong>Customer Evaluation Feedback</strong></th>
                 
             </tr>
            </thead>

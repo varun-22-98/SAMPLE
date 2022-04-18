@@ -10,7 +10,7 @@ import {MdAlternateEmail} from 'react-icons/md';
 import Alert from '../supply_components/Alert';
 
 import axios from 'axios';
-// import SourceLab from './SourceLab';
+import Demandonshore from './Demandonshoreoffshore';
 import './DemandSupply.css';
 import NavBarDashboard from './NavBarDashboard';
 
@@ -601,7 +601,7 @@ const tabledata = [
         <tr>
             <th></th>
             <th></th>
-        <th scope="col" className="text-center "><strong>Onshore</strong></th>
+        <th scope="col" className="text-center "><Link to={"/DemandOnshore"} className="text-decoration-none text-white"  state={{"demand": demand}}><strong>Onshore</strong></Link></th>
         <th scope="col"className="text-center "><strong>Offshore</strong></th>
         <th scope="col"className="text-center "><strong>Onshore</strong></th>
         <th scope="col"className="text-center "><strong>Offshore</strong></th>
@@ -615,9 +615,9 @@ const tabledata = [
             <tr> 
                 
                 <td className="text-center"><strong>1</strong></td>
-                <td className='text-start'><Link to="/Banking1" className="text-decoration-none text-dark   "  state={{"demand": demand,"supply":supply}} ><RiBankFill/><strong> Banking</strong></Link></td>
-                <td className="text-center" ><strong> {bankingon}</strong></td>
-                <td className="text-center"><strong>{bankingoff}</strong></td>
+                <td className='text-start text-decoration-none text-dark' ><RiBankFill/><strong> Banking</strong></td>
+                <td className="text-center " ><Link to={"/Banking1"}state={{"demand": demand}}  className="text-decoration-none text-dark text-start"  ><strong>{bankingon} </strong></Link></td>
+                <td className="text-center"><Link to={"/Banking2"}state={{"demand": demand}}  className="text-decoration-none text-dark text-start"  ><strong>{bankingoff}</strong></Link></td>
                 <td className="text-center" ><strong>{bankingons}</strong></td>
                 <td className="text-center"><strong>{bankingoffs}</strong></td>
                 <td className="text-center" ><strong>{bankingfulon}</strong></td>
@@ -625,9 +625,9 @@ const tabledata = [
             </tr>
             <tr>
                 <td className="text-center"><strong>2</strong></td>
-                <td className='text-start'><Link to="/Cards1" className="text-decoration-none text-dark text-start" state={{"demand": demand,"supply":supply}}><BsCreditCard/> <strong>Cards</strong></Link></td>
-                <td className="text-center "><strong>{cardson}</strong></td>
-                <td className="text-center"><strong>{cardsoff}</strong></td>
+                <td className='text-start'><BsCreditCard/> <strong>Cards</strong></td>
+                <td className="text-center "><Link to={"/Cards1"}state={{"demand": demand}}  className="text-decoration-none text-dark text-start"  ><strong>{cardson}</strong></Link></td>
+                <td className="text-center"><Link to={"/Cards2"}state={{"demand": demand}}  className="text-decoration-none text-dark text-start"  ><strong>{cardsoff}</strong></Link></td>
                 <td className="text-center"><strong>{cardsons}</strong></td>
                 <td className="text-center"><strong>{cardsoffs}</strong></td>
                 <td className="text-center"><strong>{cardsfulon}</strong></td>
@@ -635,9 +635,9 @@ const tabledata = [
             </tr>
             <tr>
                 <td className="text-center"><strong>3</strong></td>
-                <td className='text-start'><Link to="/Digicomms1" className="text-decoration-none text-dark"  state={{"demand": demand,"supply":supply}}><TiGroup/><strong>Digi Comms</strong></Link></td>
-                <td className="text-center"><strong>{digicommson}</strong></td>
-                <td className="text-center"><strong>{digicommsoff}</strong></td>
+                <td className='text-start'><i className="bi bi-pc-display"></i><strong>Digi Comms</strong></td>
+                <td className="text-center"><Link to={"/Digicomms1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{digicommson}</strong></Link></td>
+                <td className="text-center"><Link to={"/Digicomms2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{digicommsoff}</strong></Link></td>
                 <td className="text-center"><strong>{digicommsons}</strong></td>
                 <td className="text-center"><strong>{digicommsoffs}</strong></td>
                 <td className="text-center"><strong>{digicommsfulon}</strong></td>
@@ -645,9 +645,9 @@ const tabledata = [
             </tr>
             <tr> 
                 <td className="text-center"><strong>4</strong></td>
-                <td className='text-start'><Link to="/Docservices1" className="text-decoration-none text-dark" state={{"demand": demand,"supply":supply}}><i class="bi bi-files"></i><strong>Doc.Services</strong></Link></td>
-                <td className="text-center"><strong>{docserviceeon}</strong></td>
-                <td className="text-center"><strong>{docserviceoff}</strong></td>
+                <td className='text-start'><i className="bi bi-files"></i><strong>Doc.Services</strong></td>
+                <td className="text-center"><Link to={"/Docservices1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{docserviceeon}</strong></Link></td>
+                <td className="text-center"><Link to={"/Docservices2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{docserviceoff}</strong></Link></td>
                 <td className="text-center"><strong>{docserviceeons}</strong></td>
                 <td className="text-center"><strong>{docserviceoffs}</strong></td>
                 <td className="text-center"><strong>{docservicefulon}</strong></td>
@@ -655,9 +655,9 @@ const tabledata = [
             </tr>
             <tr>
                 <td className="text-center"><strong>5</strong></td>
-                <td className='text-start'><Link to="/OIE1" className="text-decoration-none text-dark"state={{"demand": demand,"supply":supply}}><TiGroup/><strong>OIE</strong></Link></td>
-                <td className="text-center"><strong>{oieon}</strong></td>
-                <td className="text-center"><strong>{oieoff}</strong></td>
+                <td className='text-start'><i className="bi bi-cash-coin"></i><strong>OIE</strong></td>
+                <td className="text-center"><Link to={"/OIE1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{oieon}</strong></Link></td>
+                <td className="text-center"><Link to={"/OIE2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{oieoff}</strong></Link></td>
                 <td className="text-center"><strong>{oieons}</strong></td>
                 <td className="text-center"><strong>{oieoffs}</strong></td>
                 <td className="text-center"><strong>{oiefulon}</strong></td>
@@ -665,9 +665,9 @@ const tabledata = [
             </tr>
             <tr>
                 <td className="text-center"><strong>6</strong></td>
-                <td className='text-start'><Link to="/Personalisation1" className="text-decoration-none text-dark" state={{"demand": demand,"supply":supply}}><TiGroup/><strong>Personalisation</strong></Link></td>
-                <td className="text-center"><strong>{personalisationon}</strong></td>
-                <td className="text-center"><strong>{personalisationoff}</strong></td>
+                <td className='text-start'><i className="bi bi-safe2"></i> <strong>Personalisation</strong></td>
+                <td className="text-center"><Link to={"/Personalisation1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{personalisationon}</strong></Link></td>
+                <td className="text-center"><Link to={"/Personalisation2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{personalisationoff}</strong></Link></td>
                 <td className="text-center"><strong>{personalisationons}</strong></td>
                 <td className="text-center"><strong>{personalisationoffs}</strong></td>
                 <td className="text-center"><strong>{personalisationfulon}</strong></td>
@@ -676,9 +676,9 @@ const tabledata = [
             
             <tr>
                 <td className="text-center"><strong>7</strong></td>
-                <td className='text-start'><Link to="/Savings1" className="text-decoration-none text-dark" state={{"demand": demand,"supply":supply}}><MdSavings/><strong>Savings</strong></Link></td>
-                <td className="text-center"><strong>{savingson}</strong></td>
-                <td className="text-center"><strong>{savingsoff}</strong></td>
+                <td className='text-start'><MdSavings/><strong>Savings</strong></td>
+                <td className="text-center"><Link to={"/Savings1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{savingson}</strong></Link></td>
+                <td className="text-center"><Link to={"/Savings2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{savingsoff}</strong></Link></td>
                 <td className="text-center"><strong>{savingsons}</strong></td>
                 <td className="text-center"><strong>{savingsoffs}</strong></td>
                 <td className="text-center"><strong>{savingsfulon}</strong></td>
@@ -686,9 +686,9 @@ const tabledata = [
             </tr>
             <tr>
                 <td className="text-center"><strong>8</strong></td>
-                <td className='text-start'><Link to="/Loans1" className="text-decoration-none text-dark"state={{"demand": demand,"supply":supply}}><FaBalanceScale/><strong>Loans</strong></Link></td>
-                <td className="text-center"><strong>{loanon}</strong></td>
-                <td className="text-center"><strong>{loanoff}</strong></td>
+                <td className='text-start'><FaBalanceScale/><strong>Loans</strong></td>
+                <td className="text-center"><Link to={"/Loans1"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{loanon}</strong></Link></td>
+                <td className="text-center"><Link to={"/Loans2"} className="text-decoration-none text-dark"  state={{"demand": demand}}><strong>{loanoff}</strong></Link></td>
                 <td className="text-center"><strong>{loanons}</strong></td>
                 <td className="text-center"><strong>{loanoffs}</strong></td>
                 <td className="text-center"><strong>{loansfulon}</strong></td>

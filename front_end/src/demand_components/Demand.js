@@ -102,6 +102,10 @@ export default function Demand() {
                                 <option value="Django">Django</option>
                                 <option value="Spring">Spring</option>
                                 <option value="Analytical Ability">Analytical Ability</option>
+                                <option value="Docker">Docker</option>
+                                <option value="Mongodb">Mongodb</option>
+                                <option value="Mysql">Mysql</option>
+                                <option value="Selenium">Selenium</option>
                                 <option value="other">Other</option>
                                 
                             </select>
